@@ -9,7 +9,11 @@ This repo is used to practice creating clean code using golang. Created as hands
 # How to Run
 
 ```bash
+# to run app
 docker-compose run app
+
+# to run test
+docker-compose run test
 ```
 
 # How to Use

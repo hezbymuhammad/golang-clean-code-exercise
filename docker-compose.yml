@@ -12,6 +12,17 @@ services:
       - gocache:/go
       - .:/app
 
+  test:
+    image: golang:1.16.7-alpine
+    command: ["sh", "-c", "go test -v ./..."]
+    environment:
+      CGO_ENABLED: 0
+    working_dir: /app
+    volumes:
+      - home:/root
+      - gocache:/go
+      - .:/app
+
 volumes:
   home:
   gocache:
