@@ -4,6 +4,7 @@ type expenses struct {
         data map[int]int
 }
 
+// TODO: instantiate from transaction model
 func NewExpenses(d []int) Transactions {
         data := make(map[int]int)
 
@@ -11,6 +12,7 @@ func NewExpenses(d []int) Transactions {
                 data[i] = v
         }
 
+        // i.e. return NewTransactions(d)
         return &expenses{data: data}
 }
 
