@@ -10,7 +10,7 @@ import (
 
 type ExpenseTestSuite struct {
         suite.Suite
-        expenses models.Expenses
+        expenses models.Transactions
 }
 
 func TestExpenses(t *testing.T) {

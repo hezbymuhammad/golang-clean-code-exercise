@@ -1,19 +1,19 @@
 package models
 
-type Expenses struct {
+type expenses struct {
         data map[int]int
 }
 
-func NewExpenses(d []int) Expenses {
+func NewExpenses(d []int) Transactions {
         data := make(map[int]int)
 
         for i, v := range d {
                 data[i] = v
         }
 
-        return Expenses{data: data}
+        return &expenses{data: data}
 }
 
-func (e *Expenses) Get(idx int) int {
+func (e *expenses) Get(idx int) int {
         return e.data[idx]
 }

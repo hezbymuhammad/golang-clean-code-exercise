@@ -1,19 +1,19 @@
 package models
 
-type Sales struct {
+type sales struct {
         data map[int]int
 }
 
-func NewSales(d []int) Sales {
+func NewSales(d []int) Transactions {
         data := make(map[int]int)
 
         for i, v := range d {
                 data[i] = v
         }
 
-        return Sales{data: data}
+        return &sales{data: data}
 }
 
-func (s *Sales) Get(idx int) int {
+func (s *sales) Get(idx int) int {
         return s.data[idx]
 }

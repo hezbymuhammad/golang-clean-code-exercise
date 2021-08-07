@@ -10,7 +10,7 @@ import (
 
 type SalesTestSuite struct {
         suite.Suite
-        sales models.Sales
+        sales models.Transactions
 }
 
 func TestSales(t *testing.T) {
