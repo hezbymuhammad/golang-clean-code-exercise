@@ -21,3 +21,15 @@ func NewTransactions(d []int) Transactions {
 func (t *transactions) Get(idx int) int {
         return t.data[idx]
 }
+
+// TODO: implement this method
+// i.e. go test is green
+func (t *transactions) GetTotal() int {
+        return 0
+}
+
+// TODO: implement this method
+// i.e. go test is green
+func (t *transactions) GetTotalWithinRange(i, j int) int {
+        return 0
+}

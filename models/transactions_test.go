@@ -28,3 +28,11 @@ func (tr *TransactionsTestSuite) TestSuccessGet() {
 func (tr *TransactionsTestSuite) TestNotFoundGet() {
         tr.Assert().Equal(tr.transactions.Get(5), 0)
 }
+
+func (tr *TransactionsTestSuite) TestSuccessGetTotal() {
+        tr.Assert().Equal(tr.transactions.GetTotal(), 6)
+}
+
+func (tr *TransactionsTestSuite) TestSuccessGetTotalWithinRange() {
+        tr.Assert().Equal(tr.transactions.GetTotalWithinRange(0, 1), 3)
+}
