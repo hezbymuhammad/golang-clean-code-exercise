@@ -9,11 +9,15 @@ type transactions struct {
 func NewTransactions(d []int) Transactions {
         data := make(map[int]int)
 
+        for i, v := range d {
+                data[i] = v
+        }
+
         return &transactions{data: data}
 }
 
 // TODO: implement this
 // i.e. go test is green
 func (t *transactions) Get(idx int) int {
-        return 0
+        return t.data[idx]
 }
