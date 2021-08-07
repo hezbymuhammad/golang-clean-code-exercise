@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    image: golang:1.16.7-alpine
+    command: ["sh", "-c", "go run main.go"]
+    environment:
+      CGO_ENABLED: 0
+    working_dir: /app
+    volumes:
+      - home:/root
+      - gocache:/go
+      - .:/app
+
+volumes:
+  home:
+  gocache:

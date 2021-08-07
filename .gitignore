@@ -1,0 +1,5 @@
+*.test
+.env
+bin/*
+coverage.out
+coverage.html
