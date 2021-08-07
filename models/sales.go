@@ -4,6 +4,7 @@ type sales struct {
         data map[int]int
 }
 
+// TODO: instantiate from transaction model
 func NewSales(d []int) Transactions {
         data := make(map[int]int)
 
@@ -11,6 +12,7 @@ func NewSales(d []int) Transactions {
                 data[i] = v
         }
 
+        // i.e. return NewTransactions(d)
         return &sales{data: data}
 }
 
