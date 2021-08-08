@@ -18,11 +18,17 @@ func main() {
         salesFirstTwoDays := 0
         expensesFirstTwoDays := 0
 
+        // TODO: create separate method for calculating sales and expense
+        // i.e. salesTotal := s.GetTotal()
+        // i.e. expensesTotal := e.GetTotal()
         for i := 0; i <= 6; i++ {
                 salesTotal += s.Get(i)
                 expensesTotal += e.Get(i)
         }
 
+        // TODO: create separate method for calculating sales and expense
+        // i.e. salesFirstTwoDays := s.GetTotalWithinRange(0, 2)
+        // i.e. expensesFirstTwoDays := e.GetTotalWithinRange(0, 2)
         for i := 0; i <= 1; i++ {
                 salesFirstTwoDays += s.Get(i)
                 expensesFirstTwoDays += e.Get(i)
