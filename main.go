@@ -13,20 +13,10 @@ func main() {
         s := models.NewSales(salesData)
         e := models.NewExpenses(expensesData)
 
-        salesTotal := 0
-        expensesTotal := 0
-        salesFirstTwoDays := 0
-        expensesFirstTwoDays := 0
-
-        for i := 0; i <= 6; i++ {
-                salesTotal += s.Get(i)
-                expensesTotal += e.Get(i)
-        }
-
-        for i := 0; i <= 1; i++ {
-                salesFirstTwoDays += s.Get(i)
-                expensesFirstTwoDays += e.Get(i)
-        }
+        salesTotal := s.GetTotal()
+        expensesTotal := e.GetTotal()
+        salesFirstTwoDays := s.GetTotalWithinRange(0, 2)
+        expensesFirstTwoDays := e.GetTotalWithinRange(0, 2)
 
         fmt.Println("=======##=======")
         fmt.Printf("Sales in the first 2 days is: %v\n", salesFirstTwoDays)
